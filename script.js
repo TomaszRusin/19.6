@@ -28,6 +28,7 @@ class Stopwatch {
             seconds: 0,
             miliseconds: 0
         };
+        this.print(this.times);
     }
 
     print() {

@@ -43,6 +43,7 @@ var Stopwatch = function () {
                 seconds: 0,
                 miliseconds: 0
             };
+            this.print(this.times);
         }
     }, {
         key: 'print',
