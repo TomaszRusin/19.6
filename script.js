@@ -1,10 +1,4 @@
 
-// import reset from './components/reset';
-// import { print, format} from './components/print'
-// import {start, stop} from './components/startStop'
-// import calculate from './components/calculate'
-// import step from './components/step'
-
 let startButton = document.getElementById('start');
 startButton.addEventListener('click', () => stopwatch.start());
 
@@ -77,5 +71,4 @@ class Stopwatch {
     }
 }
 
-const stopwatch = new Stopwatch(
-document.querySelector('.stopwatch'));
+const stopwatch = new Stopwatch(document.querySelector('.stopwatch'));
