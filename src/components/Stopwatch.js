@@ -1,14 +1,7 @@
 
-let startButton = document.getElementById('start');
-startButton.addEventListener('click', () => stopwatch.start());
+import React from 'react'
 
-let stopButton = document.getElementById('stop');
-stopButton.addEventListener('click', () => stopwatch.stop());
-
-let resetButton = document.getElementById('reset');
-resetButton.addEventListener('click', () => stopwatch.reset());
-
-class Stopwatch {
+class Stopwatch extends React.Component {
     constructor(display) {
         this.running = false;
         this.display = display;
@@ -69,6 +62,16 @@ class Stopwatch {
         this.running = false;
         clearInterval(this.watch);
     }
+
+    render() {
+        return(
+            <div>
+                <button onClick={this.start()}>Start</button>
+                <button onClick={this.stop()}>Stop</button>
+                <button onClick={this.reset()}>Reset</button>
+            </div>
+        )
+    }
 }
 
-const stopwatch = new Stopwatch(document.querySelector('.stopwatch'));
+export default Stopwatch;
